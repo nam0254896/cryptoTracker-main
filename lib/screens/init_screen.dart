@@ -1,3 +1,4 @@
+import 'package:cryptotracker/screens/wallet_srceen.dart';
 import 'package:flutter/material.dart';
 
 class InitScreen extends StatefulWidget {
@@ -47,7 +48,12 @@ class _InitScreenState extends State<InitScreen> {
                   Container(
                     padding: EdgeInsets.all(5),
                     child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => WalletScreen()));
+                        },
                         child: Image.asset('assets/images/Vector.png')),
                   )
                 ],
