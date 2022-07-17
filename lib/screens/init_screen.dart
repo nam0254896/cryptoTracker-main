@@ -1,4 +1,5 @@
 import 'package:cryptotracker/screens/wallet_srceen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class InitScreen extends StatefulWidget {
@@ -188,11 +189,46 @@ class _InitScreenState extends State<InitScreen> {
 
   Widget iTEMPLATE() {
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 70, horizontal: 50),
+        padding: EdgeInsets.only(left: 20, top: 30),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: Colors.amberAccent),
+            borderRadius: BorderRadius.circular(15), color: Color(0xff253334)),
         child: Column(
-          children: [Row(children: [])],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              Image.asset('assets/images/Currency.png'),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                'Bitcoin',
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontFamily: "Exo 2",
+                    fontWeight: FontWeight.w600),
+              ),
+            ]),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              '€36,504.30',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontFamily: "Exo 2",
+                  fontWeight: FontWeight.w600),
+            ),
+            Text(
+              '-1,368.91 (3.75%)',
+              style: TextStyle(
+                  fontSize: 12,
+                  color: Color(0xffD6B483),
+                  fontFamily: "Exo 2",
+                  fontWeight: FontWeight.w600),
+            ),
+          ],
         ));
   }
 }
