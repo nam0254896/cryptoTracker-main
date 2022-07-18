@@ -181,6 +181,32 @@ class _InitScreenState extends State<InitScreen> {
                     ),
                   ),
                 ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Watchlist',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff566559),
+                        fontFamily: "Exo 2",
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'View all',
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: Color(0xff566559),
+                            fontFamily: "Exo 2",
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Icon(Icons.keyboard_arrow_right)
+                    ],
+                  )
+                ],
               )
             ]),
       ),
@@ -189,45 +215,54 @@ class _InitScreenState extends State<InitScreen> {
 
   Widget iTEMPLATE() {
     return Container(
-        padding: EdgeInsets.only(left: 20, top: 30),
+        padding: EdgeInsets.only(top: 5),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15), color: Color(0xff253334)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [
-              Image.asset('assets/images/Currency.png'),
-              SizedBox(
-                width: 5,
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    Image.asset('assets/images/Currency.png'),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Bitcoin',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontFamily: "Exo 2",
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ]),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '€36,504.30',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontFamily: "Exo 2",
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    '-1,368.91 (3.75%)',
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Color(0xffD6B483),
+                        fontFamily: "Exo 2",
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
-              Text(
-                'Bitcoin',
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    fontFamily: "Exo 2",
-                    fontWeight: FontWeight.w600),
-              ),
-            ]),
-            SizedBox(
-              height: 20,
             ),
-            Text(
-              '€36,504.30',
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontFamily: "Exo 2",
-                  fontWeight: FontWeight.w600),
-            ),
-            Text(
-              '-1,368.91 (3.75%)',
-              style: TextStyle(
-                  fontSize: 12,
-                  color: Color(0xffD6B483),
-                  fontFamily: "Exo 2",
-                  fontWeight: FontWeight.w600),
-            ),
+            Image.asset('assets/images/Path 3 Copy 4.png')
           ],
         ));
   }
